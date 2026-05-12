@@ -1,0 +1,10 @@
+type = "card"
+title = "Projects"
+description = "Project details will be added later."
+
+[[items]]
+title = "FlowAnchor"
+subtitle = "Inversion-free video editing based on DiT"
+date = "2024.09 - Present"
+content = "Research on editing signal stabilization, spatial localization, and temporal consistency. More details will be added later."
+tags = ["Video Editing", "Diffusion Models", "DiT"]

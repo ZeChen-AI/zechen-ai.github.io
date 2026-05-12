@@ -1,0 +1,10 @@
+type = "card"
+title = "项目"
+description = "后续补充项目展示。"
+
+[[items]]
+title = "FlowAnchor"
+subtitle = "基于 DiT 的免反演视频编辑研究"
+date = "2024.09 - 至今"
+content = "围绕编辑信号稳定性、空间定位与时序一致性展开研究。更完整的项目介绍将在后续补充。"
+tags = ["视频编辑", "扩散模型", "DiT"]

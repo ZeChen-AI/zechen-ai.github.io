@@ -1,0 +1,17 @@
+type = "card"
+title = "Research"
+description = "Current research directions and project experience."
+
+[[items]]
+title = "Inversion-free Video Editing Based on DiT"
+subtitle = "State Key Laboratory of Media Convergence and Communication"
+date = "2024.09 - Present"
+content = "Research on localization drift and editing-amplitude decay in inversion-free video editing. The project designs SAR and AMM modules, builds FlowAnchor on top of Wan2.1, and constructs Anchor-Bench for evaluating local video editing in complex scenes."
+tags = ["Diffusion Models", "Video Editing", "DiT", "Wan2.1"]
+
+[[items]]
+title = "Image Quality Assessment Based on Kolmogorov-Arnold Networks"
+subtitle = "Machine Learning / No-reference Image Quality Assessment"
+date = "2024.06 - 2025.05"
+content = "Research on mapping high-dimensional visual features to MOS scores in ML-based BIQA. The project proposes TaylorKAN, replaces B-spline expansions with Taylor polynomial expansions, and combines PCA-based feature reduction with training pipeline optimization."
+tags = ["IQA", "KAN", "TaylorKAN", "BIQA"]

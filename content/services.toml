@@ -1,0 +1,27 @@
+type = "card"
+title = "Service"
+description = "Reviewing, conference participation, patents, and honors."
+
+[[items]]
+title = "Conference Reviewing"
+subtitle = "Sub-reviewer"
+date = "2025"
+content = "Sub-reviewer for AAAI 2025 and ACM MM 2025."
+
+[[items]]
+title = "National Invention Patent"
+subtitle = "Precise video editing method and system based on flow-field modeling"
+date = "Under preliminary review"
+content = "Inventors: Qi Mao, Ze Chen, Lan Chen, Yuanhang Li, Siwei Ma."
+
+[[items]]
+title = "Conference Participation"
+subtitle = "Academic conferences"
+date = "2025"
+content = "ICASSP 2025 in Suzhou and ChinaMM 2025 in Weihai."
+
+[[items]]
+title = "Scholarships and Honors"
+subtitle = "Undergraduate stage"
+date = "2023-2025"
+content = "BYD Scholarship (2024-2025), Sony Scholarship (2023-2024), Merit Student for two consecutive years, and Lanqiao Cup AI Innovation Competition second prize."
