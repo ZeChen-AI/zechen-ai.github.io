@@ -1,4 +1,0 @@
-type = "publication"
-title = "Publications"
-description = "Published, accepted, and under-review papers."
-source = "publications.bib"
