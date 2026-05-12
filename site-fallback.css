@@ -1,0 +1,55 @@
+nav.fixed > div:first-child {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.72);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+html.dark nav.fixed > div:first-child,
+html[data-theme="dark"] nav.fixed > div:first-child {
+  background: rgba(10, 10, 10, 0.92) !important;
+  border-bottom-color: rgba(38, 38, 38, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.zc-theme-toggle {
+  cursor: pointer;
+}
+
+.zc-theme-toggle svg {
+  display: block;
+}
+
+button[data-filter-group].is-active {
+  border-color: rgb(217, 161, 87);
+  background: rgba(217, 161, 87, 0.16);
+  color: rgb(180, 113, 37);
+}
+
+html.dark button[data-filter-group].is-active,
+html[data-theme="dark"] button[data-filter-group].is-active {
+  background: rgba(217, 161, 87, 0.22);
+  color: rgb(245, 190, 118);
+}
+
+.zc-pub-action {
+  border-radius: 0.375rem;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(82, 98, 120);
+  transition: all 160ms ease;
+}
+
+.zc-pub-action:hover,
+.zc-pub-action.is-active {
+  background: rgba(217, 161, 87, 0.12);
+  color: rgb(180, 113, 37);
+}
+
+.zc-abstract[hidden],
+.zc-publication[hidden],
+[data-publication-filter-panel][hidden] {
+  display: none !important;
+}
