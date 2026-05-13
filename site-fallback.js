@@ -86,7 +86,7 @@
     var toggle = document.querySelector("[data-publication-filter-toggle]");
     if (!cards.length) return;
 
-    var active = { year: "", type: "", tag: "" };
+    var active = { year: "", type: "", tags: [] };
 
     if (toggle && panel) {
       toggle.addEventListener("click", function () {
@@ -101,11 +101,22 @@
       button.addEventListener("click", function () {
         var group = button.getAttribute("data-filter-group");
         var value = button.getAttribute("data-filter-value");
-        active[group] = active[group] === value ? "" : value;
+        if (group === "tag") {
+          var index = active.tags.indexOf(value);
+          if (index === -1) {
+            active.tags.push(value);
+          } else {
+            active.tags.splice(index, 1);
+          }
+        } else {
+          active[group] = active[group] === value ? "" : value;
+        }
         buttons.forEach(function (node) {
-          var same = node.getAttribute("data-filter-group") === group;
-          var selected = same && active[group] === node.getAttribute("data-filter-value");
+          var nodeGroup = node.getAttribute("data-filter-group");
+          var nodeValue = node.getAttribute("data-filter-value");
+          var selected = nodeGroup === "tag" ? active.tags.indexOf(nodeValue) !== -1 : active[nodeGroup] === nodeValue;
           node.classList.toggle("is-active", selected);
+          node.setAttribute("aria-pressed", selected ? "true" : "false");
         });
         applyPublicationFilters();
       });
@@ -119,11 +130,14 @@
       var query = search ? search.value.trim().toLowerCase() : "";
       var visibleCount = 0;
       cards.forEach(function (card) {
-        var tags = card.getAttribute("data-tags") || "";
+        var tags = (card.getAttribute("data-tags") || "").split(/\s+/).filter(Boolean);
+        var tagMatched = !active.tags.length || active.tags.every(function (tag) {
+          return tags.indexOf(tag) !== -1;
+        });
         var visible =
           (!active.year || card.getAttribute("data-year") === active.year) &&
           (!active.type || card.getAttribute("data-type") === active.type) &&
-          (!active.tag || tags.split(/\s+/).indexOf(active.tag) !== -1) &&
+          tagMatched &&
           (!query || (card.getAttribute("data-search") || card.textContent).toLowerCase().indexOf(query) !== -1);
         card.hidden = !visible;
         if (visible) visibleCount += 1;
