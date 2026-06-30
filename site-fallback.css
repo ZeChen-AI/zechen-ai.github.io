@@ -48,6 +48,136 @@ html[data-theme="dark"] button[data-filter-group].is-active {
   color: rgb(180, 113, 37);
 }
 
+/* Photo and card sizing adjustments */
+.w-48 { width: 12rem; }
+.h-48 { height: 12rem; }
+.w-56 { width: 14rem; }
+
+/* ====== Hand-drawn / 手账风格 start ====== */
+
+/* Polka dot background instead of grid */
+body {
+  background-color: var(--background) !important;
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.12) 1.5px, transparent 1.5px) !important;
+  background-size: 24px 24px !important;
+}
+
+html.dark body,
+html[data-theme="dark"] body {
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.15) 1.5px, transparent 1.5px) !important;
+}
+
+/* Sidebar sticker tags (like undergraduate, high school labels) */
+main span.rounded.bg-neutral-100 {
+  font-family: 'Caveat', 'Bradley Hand', cursive !important;
+  font-size: 0.85rem !important;
+  padding: 0.25rem 0.7rem !important;
+  border: 1.5px dashed var(--accent) !important;
+  background: transparent !important;
+  border-radius: 12px !important;
+}
+
+/* Card title icon decoration */
+.font-semibold.text-primary:has(.font-semibold) {
+  position: relative;
+}
+
+/* Hand-writing / script font: Caveat */
+.font-script {
+  font-family: 'Caveat', 'Bradley Hand', cursive;
+}
+
+/* Section headings: Caveat + wavy underline */
+.section-heading {
+  position: relative;
+  display: inline-block;
+  font-family: 'Caveat', 'Bradley Hand', 'Apple Chancery', cursive !important;
+  letter-spacing: 1px;
+}
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 70%;
+  height: 4px;
+  background: transparent;
+  /* hand-drawn squiggle effect */
+  background-image: linear-gradient(90deg, transparent 0%, var(--accent) 15%, transparent 25%, var(--accent) 35%, transparent 50%, var(--accent) 60%, transparent 75%, var(--accent) 85%, transparent 100%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  opacity: 0.7;
+  border-radius: 0;
+}
+
+/* Hand-drawn card borders: publication and award cards */
+main div.shadow-sm.border.rounded-lg,
+main div.shadow-sm.border.rounded-xl {
+  border-style: dashed !important;
+  border-width: 2px !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+}
+
+/* Navigation brand name in Caveat */
+nav a.font-script {
+  font-family: 'Caveat', 'Bradley Hand', 'Apple Chancery', cursive !important;
+  font-size: 1.6rem !important;
+  letter-spacing: 1px;
+}
+
+/* Sidebar name in script font */
+h1.font-script.text-3xl {
+  font-family: 'Caveat', 'Bradley Hand', cursive !important;
+  font-size: 2.2rem !important;
+  letter-spacing: 1px;
+}
+
+/* Sticker-like Research Interests card */
+div.bg-neutral-100.dark\:bg-neutral-800.rounded-lg.p-4 {
+  border: 2px dashed var(--accent) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 16px !important;
+}
+
+/* Paperclip accent for nav language toggle */
+.flex.rounded-md.border.border-neutral-200\/80 {
+  border-style: solid !important;
+}
+.flex.rounded-md.border.border-neutral-200\/80 a {
+  font-weight: 500;
+}
+
+/* Playful link hover effect */
+a.text-accent.font-medium {
+  text-decoration: none;
+  position: relative;
+}
+a.text-accent.font-medium:hover {
+  text-decoration: none;
+}
+
+/* Card hover: subtle lift instead of scale */
+[class*="hover:scale-"]:hover {
+  transform: translateY(-3px) !important;
+  scale: 1 !important;
+}
+
+/* 手账 washi tape accent for nav */
+nav .max-w-7xl .flex.justify-between {
+  position: relative;
+}
+
+/* Inline links in about section — clean, no underline */
+.text-neutral-700 a.text-accent.font-medium {
+  text-decoration: none;
+  border-bottom: none;
+  opacity: 0.85;
+}
+
+/* ====== Hand-drawn / 手账风格 end ====== */
+
 .zc-abstract[hidden],
 .zc-publication[hidden],
 [data-publication-filter-panel][hidden] {
