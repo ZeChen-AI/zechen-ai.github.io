@@ -55,16 +55,26 @@ html[data-theme="dark"] button[data-filter-group].is-active {
 
 /* ====== Hand-drawn / 手账风格 start ====== */
 
-/* Polka dot background instead of grid */
+/* Graph paper (淡淡方格) background */
 body {
   background-color: var(--background) !important;
-  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.12) 1.5px, transparent 1.5px) !important;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px) !important;
   background-size: 24px 24px !important;
 }
 
 html.dark body,
 html[data-theme="dark"] body {
-  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.15) 1.5px, transparent 1.5px) !important;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.13) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.13) 1px, transparent 1px) !important;
+}
+
+/* Make main content area transparent so grid pattern shows through */
+main .bg-background,
+main > div.bg-background {
+  background: transparent !important;
 }
 
 /* Sidebar sticker tags (like undergraduate, high school labels) */
